@@ -1,0 +1,41 @@
+{
+  "scope": "Only verified company browser routes are acquisition choices beside their matching app stores. Separate browser catalogue removed. No unverified browser links added.",
+  "games": [
+    {
+      "appId": "1357802596",
+      "slug": "word-search",
+      "name": "Word Search",
+      "route": "/wordsearch/",
+      "absoluteUrl": "https://wordsearchgamesinc.com/wordsearch/",
+      "runtimeFiles": [
+        {
+          "file": "wordsearch/Build/fa38ded71f0330508acc3ac6d4359fad.loader.js",
+          "bytes": 26454,
+          "sha256": "60cf1bfe1168ec81ec1e40f59d9457412022787a0aa11d63272c437d249ed1c3"
+        },
+        {
+          "file": "wordsearch/Build/game.data",
+          "bytes": 41985162,
+          "sha256": "afec1f7317eaa5e7693abf96dfc99df6730b9ae6e749a1c4121bc2c847aa1736"
+        },
+        {
+          "file": "wordsearch/Build/framework.js",
+          "bytes": 498514,
+          "sha256": "a53502834a259b9569fc72c1e481e04f27418dd275d40588b1ee189353fc2bad"
+        },
+        {
+          "file": "wordsearch/Build/game.wasm",
+          "bytes": 59989287,
+          "sha256": "84ca0f0a28aba050aca16db439de557bb94ff1d777a2e0a005ffd42309023a65"
+        }
+      ],
+      "verification": "Existing source wrapper references resolve to actual preserved runtime assets; no new engine or gameplay correctness claim.",
+      "sameFeatureParityInferred": false
+    }
+  ],
+  "unverifiedNotPromoted": [
+    "Fish Sudoku",
+    "Solitaire",
+    "Spider Solitaire"
+  ]
+}

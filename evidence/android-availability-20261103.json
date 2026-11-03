@@ -1,0 +1,138 @@
+{
+  "recordedAt": "2026-11-03T22:30:53.470463+00:00",
+  "scope": "Verified platform availability only; publication paused. Existing iOS claims and source identity preserved.",
+  "games": {
+    "1357802596": {
+      "iosName": "Word Search ·",
+      "iosBundle": "com.word.games.search.find.connect.letter",
+      "iosSeller": "Word Search Games Inc.",
+      "androidPackage": "com.wordconnect.word.games.search.find",
+      "androidName": "Word Search: Word Find",
+      "androidDisplayPublisher": "Puzzle Cats",
+      "androidLegalDeveloper": "Puzzle Cats Inc",
+      "basis": "The actual Word Search Unity project explicitly pairs these different platform package IDs and returns Apple ID1357802596. Current official listings confirm the product identities.",
+      "mappingEvidence": [
+        {
+          "path": "/Volumes/ExternalRAID/Code/word-games/wordsearch/ProjectSettings/ProjectSettings.asset",
+          "lines": [
+            169,
+            170,
+            173
+          ],
+          "facts": [
+            "Android: com.wordconnect.word.games.search.find",
+            "iPhone: com.word.games.search.find.connect.letter"
+          ]
+        },
+        {
+          "path": "/Volumes/ExternalRAID/Code/word-games/wordsearch/Assets/Scripts/GameManager/PCGameManager.cs",
+          "lines": [
+            517,
+            519
+          ],
+          "fact": "GetAppleId() returns 1357802596"
+        }
+      ],
+      "schemaNote": "iOS seller and Android developer differ. Keep separate platform-specific application publisher/name facts rather than relabeling Android as Word Search Games Inc.",
+      "iosAppId": "1357802596",
+      "iosStoreUrl": "https://apps.apple.com/us/app/id1357802596",
+      "appleLookupUrl": "https://itunes.apple.com/lookup?id=1357802596&country=us",
+      "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.wordconnect.word.games.search.find",
+      "httpStatus": 200,
+      "status": "verified official counterpart",
+      "featureParityInferred": false,
+      "sources": [
+        {
+          "title": "Official Apple US lookup",
+          "url": "https://itunes.apple.com/lookup?id=1357802596&country=us"
+        },
+        {
+          "title": "Official Google Play product and developer information",
+          "url": "https://play.google.com/store/apps/details?id=com.wordconnect.word.games.search.find"
+        }
+      ],
+      "localRepositoryCommit": "3b8ca2da6b59a2306e8f127f1baef793e765c141"
+    },
+    "1642045964": {
+      "iosName": "Word Hunt Connect: Brain Game",
+      "iosBundle": "com.wordscapes.wordcross.word.connect.puzzle",
+      "iosSeller": "Word Search Games Inc.",
+      "androidPackage": "com.wordscapes.wordcross.word.connect.puzzle",
+      "androidName": "Word Hunt Connect: Crossword",
+      "androidDisplayPublisher": "Word Search Games",
+      "androidLegalDeveloper": "Word Search Games Inc.",
+      "basis": "Exact iOS bundle/Android package match and matching official legal developer; platform titles differ.",
+      "iosAppId": "1642045964",
+      "iosStoreUrl": "https://apps.apple.com/us/app/id1642045964",
+      "appleLookupUrl": "https://itunes.apple.com/lookup?id=1642045964&country=us",
+      "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.wordscapes.wordcross.word.connect.puzzle",
+      "httpStatus": 200,
+      "status": "verified official counterpart",
+      "featureParityInferred": false,
+      "sources": [
+        {
+          "title": "Official Apple US lookup",
+          "url": "https://itunes.apple.com/lookup?id=1642045964&country=us"
+        },
+        {
+          "title": "Official Google Play product and developer information",
+          "url": "https://play.google.com/store/apps/details?id=com.wordscapes.wordcross.word.connect.puzzle"
+        },
+        {
+          "title": "Official Word Search Games Android developer directory",
+          "url": "https://play.google.com/store/apps/dev?id=6687575912772082734"
+        }
+      ]
+    },
+    "6737245144": {
+      "iosName": "Vocab: Learn English Words",
+      "iosBundle": "com.word.vocabulary.vocab",
+      "iosSeller": "Word Search Games Inc.",
+      "androidPackage": "com.word.vocabulary.vocab",
+      "androidName": "Vocab: Learn English Words",
+      "androidDisplayPublisher": "Word Search Games",
+      "androidLegalDeveloper": "Word Search Games Inc.",
+      "basis": "Exact iOS bundle/Android package match, matching product name and official legal developer.",
+      "iosAppId": "6737245144",
+      "iosStoreUrl": "https://apps.apple.com/us/app/id6737245144",
+      "appleLookupUrl": "https://itunes.apple.com/lookup?id=6737245144&country=us",
+      "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.word.vocabulary.vocab",
+      "httpStatus": 200,
+      "status": "verified official counterpart",
+      "featureParityInferred": false,
+      "sources": [
+        {
+          "title": "Official Apple US lookup",
+          "url": "https://itunes.apple.com/lookup?id=6737245144&country=us"
+        },
+        {
+          "title": "Official Google Play product and developer information",
+          "url": "https://play.google.com/store/apps/details?id=com.word.vocabulary.vocab"
+        },
+        {
+          "title": "Official Word Search Games Android developer directory",
+          "url": "https://play.google.com/store/apps/dev?id=6687575912772082734"
+        }
+      ]
+    }
+  },
+  "idCorrection": {
+    "incorrectRequestedPair": {
+      "name": "Word Hunt Connect",
+      "iosAppId": "1470131814"
+    },
+    "officialIdentityFor1470131814": {
+      "name": "Crossword ·",
+      "bundleId": "crossword.puzzles",
+      "seller": "Word Search Games Inc.",
+      "source": "https://itunes.apple.com/lookup?id=1470131814&country=us"
+    },
+    "correctConnectIosAppId": "1642045964",
+    "correctConnectIosName": "Word Hunt Connect: Brain Game",
+    "action": "Keep Crossword1470131814 unchanged. Apply the Connect Android link only to1642045964.",
+    "existingWordHuntMappingUnchanged": {
+      "iosAppId": "1357352041",
+      "googlePlayUrl": "https://play.google.com/store/apps/details?id=word.hunt.connect"
+    }
+  }
+}

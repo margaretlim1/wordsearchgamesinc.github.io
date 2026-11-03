@@ -1,7 +1,8 @@
 {
   "1357802596": {
     "apple": "https://apps.apple.com/us/app/word-search/id1357802596?uo=4",
-    "google": null
+    "google": "https://play.google.com/store/apps/details?id=com.wordconnect.word.games.search.find",
+    "browser": "/wordsearch/"
   },
   "1357352041": {
     "apple": "https://apps.apple.com/us/app/word-hunt/id1357352041?uo=4",
@@ -9,11 +10,11 @@
   },
   "1642045964": {
     "apple": "https://apps.apple.com/us/app/word-hunt-connect-brain-game/id1642045964?uo=4",
-    "google": null
+    "google": "https://play.google.com/store/apps/details?id=com.wordscapes.wordcross.word.connect.puzzle"
   },
   "6737245144": {
     "apple": "https://apps.apple.com/us/app/vocab-learn-english-words/id6737245144?uo=4",
-    "google": null
+    "google": "https://play.google.com/store/apps/details?id=com.word.vocabulary.vocab"
   },
   "1470131814": {
     "apple": "https://apps.apple.com/us/app/crossword/id1470131814?uo=4",
