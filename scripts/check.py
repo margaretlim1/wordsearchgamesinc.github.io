@@ -67,6 +67,8 @@ for folder in config.get('visibleGameWrappers', []):
  if 'id="about-game"' not in html or 'class="game-stage"' not in html:errors.append('Visible browser About panel absent '+folder)
  if re.search(r'left:\s*-\d{4,}px',html):errors.append('Offscreen browser content '+folder)
  if 'id="unity-canvas"' not in html:errors.append('Browser canvas absent '+folder)
+ about=re.search(r'<main class="seo-content"[^>]*id="about-game".*?</main>',html,re.S)
+ if not about or not re.search(r'<a[^>]+href="https://apps\.apple\.com/',about.group(0)):errors.append('Direct browser App Store action absent '+folder)
 for route,canonical in config.get('externalCanonicalAliases',{}).items():
  html=(OUT/route.strip('/')/'index.html').read_text()
  if 'rel="canonical" href="'+canonical+'"' not in html:errors.append('Cross-domain alias changed '+route)
