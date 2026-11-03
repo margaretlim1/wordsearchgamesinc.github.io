@@ -136,24 +136,32 @@
             transition: width 0.15s ease-out;
         }
 
-        .seo-content {
-            position: absolute;
-            left: -10000px;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
+        /* The game keeps its own viewport; the introduction stays in normal page flow. */
+        html, body { height: auto; min-height: 100%; overflow-x: hidden; overflow-y: auto; touch-action: auto; }
+        .game-nav { min-height: 64px; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 16px; padding: 10px 16px; background: #142238; color: white; font-size: 14px; }
+        .game-nav a { color: inherit; text-underline-offset: 3px; min-height: 44px; display: inline-flex; align-items: center; }
+        .game-nav .game-brand { font-weight: 700; text-decoration: none; }
+        .game-nav .get-app, .game-downloads .get-app { padding: 10px 15px; border-radius: 10px; background: #ffd66c; color: #172238; font-weight: 700; text-decoration: none; }
+        .game-stage { position: relative; width: 100%; height: calc(100vh - 64px); height: calc(100svh - 64px); min-height: 280px; }
+        .game-stage #game-container, .game-stage #gameContainer { width: 100%; height: 100%; }
+        .game-stage #unity-canvas { touch-action: none; }
+        .game-stage .rotate-message { position: absolute; }
+        .seo-content { position: static; width: min(68rem, calc(100% - 40px)); height: auto; overflow: visible; margin: 0 auto; padding: 42px 0 56px; color: white; line-height: 1.7; }
+        .seo-content h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; }
+        .seo-content h2 { font-size: 25px; line-height: 1.25; }
+        .seo-content h3 { font-size: 19px; }
+        .seo-content li { margin-block: 7px; }
+        .seo-content a { color: #ffdf83; text-underline-offset: 3px; }
+        .game-downloads { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 28px; }
+        .game-downloads a { display: inline-flex; align-items: center; min-height: 44px; }
+        .game-nav a:focus-visible, .seo-content a:focus-visible { outline: 3px solid white; outline-offset: 4px; }
+        @media (max-width: 420px) { .game-nav { gap: 10px; font-size: 12px; padding-inline: 12px; } .game-nav .get-app { padding-inline: 10px; } .seo-content { width: calc(100% - 32px); } }
     </style>
 </head>
 <body>
-    <main class="seo-content">
-        <h1>Free Online Word Search</h1>
-        <p>Find hidden words in responsive browser-based Word Search puzzles.</p>
-        <h2>Features</h2>
-        <ul>
-            <li>Free browser play with no download required</li>\n<li>Responsive layouts for desktop, tablet, and phone browsers</li>\n<li>Classic, category, story, timed, and daily challenge modes</li>\n<li>Persistent local progress and statistics</li>\n<li>Multiple supported languages</li>\n
-        </ul>
-    </main>
+<nav class="game-nav" aria-label="Game navigation"><a class="game-brand" href="/">Word Search</a><a href="#about-game">About the game ↓</a><a class="get-app" href="/games/word-search/#download">Get the app ↗</a></nav>
+<section class="game-stage" aria-label="Word Search browser game">
+
 
     <div id="game-container">
         <div id="unity-container">
@@ -168,7 +176,24 @@
         </div>
     </div>
 
-    <script>
+
+</section>
+<main class="seo-content" id="about-game" tabindex="-1">
+        <h1>Free Online Word Search</h1>
+        <p>Find hidden words in responsive browser-based Word Search puzzles.</p>
+        <h2>Features</h2>
+        <ul>
+            <li>Free browser play with no download required</li>
+<li>Responsive layouts for desktop, tablet, and phone browsers</li>
+<li>Classic, category, story, timed, and daily challenge modes</li>
+<li>Persistent local progress and statistics</li>
+<li>Multiple supported languages</li>
+
+        </ul>
+
+<div class="game-downloads"><a class="get-app" href="/games/word-search/#download">Get Word Search for your phone ↗</a><a href="/games/word-search/">Explore Word Search</a><a href="#unity-canvas">Back to the game ↑</a></div>
+</main>
+<script>
         const buildUrl = "Build";
         const loaderUrl = buildUrl + "/fa38ded71f0330508acc3ac6d4359fad.loader.js";
         const canvas = document.querySelector("#unity-canvas");
